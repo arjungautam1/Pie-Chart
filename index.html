@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ChartJS - Pie Chart</title>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="Chart.js"></script>
+	</head>
+	<body>
+		<canvas id="mycanvas" width="500" height="500">
+		<script>
+			$(document).ready(function(){
+				var ctx = $("#mycanvas").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 10,
+						color: "cornflowerblue",
+						highlight:"Gray",
+						label: "January"
+					},
+					{
+						value: 10,
+						color: "lightgreen",
+						highlight:"Gray",
+						label: "February"
+					},
+					{
+						value: 10,
+						color: "#52D726",
+						highlight:"Gray",
+						label: "March"
+					},
+					{
+						value: 10,
+						color: "#FFEC00",
+						highlight:"Gray",
+						label: "April"
+					},
+					{
+						value: 8,
+						color: "#FF7300",
+						highlight:"Gray",
+						label: "May"
+					},
+					{
+						value: 8,
+						color: "#FF0000",
+						highlight:"Gray",
+						label: "June"
+					},
+					{
+						value: 8,
+						color: "Brown",
+						highlight:"Gray",
+						label: "July"
+					},
+					{
+						value: 5,
+						color: "#7CDDDD",
+						highlight:"Gray",
+						label: "August"
+					},
+					{
+						value: 10,
+						color: "Tomato",
+						highlight:"Gray",
+						label: "September"
+					},
+					{
+						value: 10,
+						color: "MediumSeaGreen",
+						highlight:"Gray",
+						label: "October"
+					},
+					{
+						value: 10,
+						color: "Black",
+						highlight:"Gray",
+						label: "November"
+					},
+					{
+						value: 10,
+						color: "Violet",
+						highlight:"Gray",
+						label: "December"
+					}
+
+
+				];
+
+				//draw
+				var piechart = new Chart(ctx).Pie(data);
+			});
+		</script>
+	</body>
+</html>
